@@ -1,9 +1,12 @@
 
-function extractNameFromTemplate(value) {
-  return value.split('Hello, ')[1].split('!')[0];
+function removeFirstOccurrences(str, value) {
+  return str.replace(value, '');
 }
 
-console.log(extractNameFromTemplate('Hello, John Doe!'));
+console.log(removeFirstOccurrences('To be or not to be', 'not'));
+console.log(removeFirstOccurrences('I like legends', 'end'));
+console.log(removeFirstOccurrences('ABABAB', 'BA'));
 
-// 'Hello, John Doe!' => 'John Doe'
-// 'Hello, Chuck Norris!' => 'Chuck Norris'
+// 'To be or not to be', 'not'  => 'To be or  to be'
+// 'I like legends', 'end' => 'I like legs',
+// 'ABABAB','BA' => 'ABAB'
