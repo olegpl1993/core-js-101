@@ -260,8 +260,22 @@ function encodeToRot13(/* str */) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-function isString(/* value */) {
-  throw new Error('Not implemented');
+function isString(value) {
+  let bool;
+  if (typeof value === 'string') {
+    bool = true;
+  } else if (value === null) {
+    bool = false;
+  } else if (Array.isArray(value)) {
+    bool = false;
+  } else if (typeof value === 'object' && typeof value[0] === 'string') {
+    bool = true;
+  } else if (typeof value === 'object') {
+    bool = false;
+  } else {
+    bool = false;
+  }
+  return bool;
 }
 
 
