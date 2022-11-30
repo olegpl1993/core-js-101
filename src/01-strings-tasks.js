@@ -156,8 +156,8 @@ function unbracketTag(str) {
  *   'Thunderstruck' => 'THUNDERSTRUCK'
  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  */
-function convertToUpperCase(/* str */) {
-  throw new Error('Not implemented');
+function convertToUpperCase(str) {
+  return str.toUpperCase();
 }
 
 /**
@@ -175,8 +175,8 @@ function convertToUpperCase(/* str */) {
  *   ],
  *   'info@gmail.com' => ['info@gmail.com']
  */
-function extractEmails(/* str */) {
-  throw new Error('Not implemented');
+function extractEmails(str) {
+  return str.split(';');
 }
 
 /**
@@ -202,8 +202,28 @@ function extractEmails(/* str */) {
  *             '└──────────┘\n'
  *
  */
-function getRectangleString(/* width, height */) {
-  throw new Error('Not implemented');
+function getRectangleString(width, height) {
+  let str = '┌';
+  for (let i = 2; i < width; i += 1) {
+    str += '─';
+  }
+  str += '┐\n';
+
+  for (let i = 2; i < height; i += 1) {
+    let subStr = '│';
+    for (let n = 2; n < width; n += 1) {
+      subStr += ' ';
+    }
+    subStr += '│\n';
+    str += subStr;
+  }
+
+  str += '└';
+  for (let i = 2; i < width; i += 1) {
+    str += '─';
+  }
+  str += '┘\n';
+  return str;
 }
 
 
