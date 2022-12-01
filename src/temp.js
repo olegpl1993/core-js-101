@@ -1,19 +1,9 @@
 /*
-function toCsvText(arr) {
-  return arr.map((el) => el.join(',')).join('\n');
+function getMovingSum(arr) {
+  return arr.map((val, i) => val + arr.slice(0, i).reduce((acc, curVal) => acc + curVal, 0));
 }
 
-console.log(toCsvText([
-  [0, 1, 2, 3, 4],
-  [10, 11, 12, 13, 14],
-  [20, 21, 22, 23, 24],
-  [30, 31, 32, 33, 34],
-]));
-*/
+console.log(getMovingSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
-/*
- *     '0,1,2,3,4\n'
- *    +'10,11,12,13,14\n'
- *    +'20,21,22,23,24\n'
- *    +'30,31,32,33,34'
+// [1, 3, 6, 10, 15, 21, 28, 36, 45, 55]
 */
