@@ -1,16 +1,22 @@
+
+/**
+ * Returns a root of linear equation a*x + b = 0 given by coefficients a and b.
+ *
+ * @param {number} a
+ * @param {number} b
+ * @return {number}
+ *
+ * @example:
+ *   5*x - 10 = 0    => 2
+ *   x + 8 = 0       => -8
+ *   5*x = 0         => 0
+ */
+
 /*
-function getAverage(value1, value2) {
-  let num;
-  if (value2 === Number.MAX_VALUE) {
-    num = Number.MAX_VALUE;
-  } else {
-    num = (value1 + value2) / 2;
-  }
-  return num;
+function getLinearEquationRoot(a, b) {
+  throw new Error('Not implemented');
 }
 
-console.log(getAverage(Number.MAX_VALUE - 2, Number.MAX_VALUE));
-console.log(getAverage(Number.MAX_VALUE, -Number.MAX_VALUE / 2));
-console.log(Number.MAX_VALUE - 1);
-console.log(Number.MAX_VALUE / 4);
+console.log(getLinearEquationRoot(a, b));
+console.log(getLinearEquationRoot(a, b));
 */
