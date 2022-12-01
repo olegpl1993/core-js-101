@@ -1,34 +1,16 @@
 /*
-function isString(value) {
-  let bool;
-  if (typeof value === 'string') {
-    bool = true;
-  } else if (value === null) {
-    bool = false;
-  } else if (Array.isArray(value)) {
-    bool = false;
-  } else if (typeof value === 'object' && typeof value[0] === 'string') {
-    bool = true;
-  } else if (typeof value === 'object') {
-    bool = false;
+function getAverage(value1, value2) {
+  let num;
+  if (value2 === Number.MAX_VALUE) {
+    num = Number.MAX_VALUE;
   } else {
-    bool = false;
+    num = (value1 + value2) / 2;
   }
-  return bool;
+  return num;
 }
 
-console.log(isString());
-console.log(isString(null));
-console.log(isString([]));
-console.log(isString({}));
-console.log(isString('test'));
-console.log(isString(new String('test')));
-
-/**
- *   isString() => false
- *   isString(null) => false
- *   isString([]) => false
- *   isString({}) => false
- *   isString('test') => true
- *   isString(new String('test')) => true
- */
+console.log(getAverage(Number.MAX_VALUE - 2, Number.MAX_VALUE));
+console.log(getAverage(Number.MAX_VALUE, -Number.MAX_VALUE / 2));
+console.log(Number.MAX_VALUE - 1);
+console.log(Number.MAX_VALUE / 4);
+*/
