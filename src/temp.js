@@ -1,10 +1,19 @@
 /*
-function generateOdds(len) {
-  const arr = new Array(len).fill(0).map((val, index) => index * 2 + 1);
-  return arr;
+function toCsvText(arr) {
+  return arr.map((el) => el.join(',')).join('\n');
 }
 
-console.log(generateOdds(1)); // => [ 1 ]
-console.log(generateOdds(2)); // => [ 1, 3 ]
-console.log(generateOdds(5)); // => [ 1, 3, 5, 7, 9 ]
+console.log(toCsvText([
+  [0, 1, 2, 3, 4],
+  [10, 11, 12, 13, 14],
+  [20, 21, 22, 23, 24],
+  [30, 31, 32, 33, 34],
+]));
+*/
+
+/*
+ *     '0,1,2,3,4\n'
+ *    +'10,11,12,13,14\n'
+ *    +'20,21,22,23,24\n'
+ *    +'30,31,32,33,34'
 */
