@@ -1,9 +1,11 @@
 /*
-function getMovingSum(arr) {
-  return arr.map((val, i) => val + arr.slice(0, i).reduce((acc, curVal) => acc + curVal, 0));
+function getPositivesCount(arr) {
+  return arr.filter((el) => typeof el === 'number' && el > 0).length;
 }
 
-console.log(getMovingSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
-
-// [1, 3, 6, 10, 15, 21, 28, 36, 45, 55]
+console.log(getPositivesCount([])); // => 0
+console.log(getPositivesCount([-1, 0, 1])); // => 1
+console.log(getPositivesCount([1, 2, 3])); // => 3
+console.log(getPositivesCount([null, 1, 'elephant'])); // => 1
+console.log(getPositivesCount([1, '2'])); // => 1
 */
