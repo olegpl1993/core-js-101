@@ -767,7 +767,7 @@ describe('03-arrays-tasks', () => {
         Array.from(data.expected),
         Array.from(actual),
       );
-    });
+    });selectMany
   });
 
 
