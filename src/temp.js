@@ -1,10 +1,14 @@
 /*
-function encodeToRot13(str) {
-  const base = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ';
-  const encode = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm ';
-  return str.split('').map((el) => encode[base.indexOf(el)]).join('');
+function sortDigitNamesByNumericOrder(arr) {
+  const pattern = ['zero', 'one', 'two', 'three',
+    'four', 'five', 'six', 'seven', 'eight', 'nine'];
+  return arr.sort((a, b) => pattern.indexOf(a) - pattern.indexOf(b));
 }
 
-console.log(encodeToRot13('hello')); // => 'uryyb'
-console.log(encodeToRot13('Gb trg gb gur bgure fvqr!')); // => 'To get to the other side!'
+console.log(sortDigitNamesByNumericOrder([]));
+// => []
+console.log(sortDigitNamesByNumericOrder(['nine', 'eight', 'nine', 'eight']));
+// => [ 'eight','eight','nine','nine']
+console.log(sortDigitNamesByNumericOrder(['one', 'one', 'one', 'zero']));
+// => [ 'zero','one','one','one' ]
 */
