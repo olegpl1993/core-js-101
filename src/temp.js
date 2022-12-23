@@ -1,11 +1,10 @@
 /*
-function isLeapYear(date) {
-  return new Date(date.getFullYear(), 1, 29).getDate() === 29;
+function timeSpanToString(startDate, endDate) {
+  return new Date(endDate - startDate).toISOString().slice(11, -1);
 }
 
-console.log(isLeapYear(new Date(1900, 1, 1))); //    => false
-console.log(isLeapYear(new Date(2000, 1, 1))); //    => true
-console.log(isLeapYear(new Date(2001, 1, 1))); //    => false
-console.log(isLeapYear(new Date(2012, 1, 1))); //    => true
-console.log(isLeapYear(new Date(2015, 1, 1))); //    => false
+console.log(timeSpanToString(
+  new Date(2000, 1, 1, 10, 0, 0), new Date(2000, 1, 1, 15, 20, 10, 453),
+));
+//   => "05:20:10.453"
 */
