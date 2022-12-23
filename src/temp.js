@@ -1,14 +1,11 @@
 /*
-function sortDigitNamesByNumericOrder(arr) {
-  const pattern = ['zero', 'one', 'two', 'three',
-    'four', 'five', 'six', 'seven', 'eight', 'nine'];
-  return arr.sort((a, b) => pattern.indexOf(a) - pattern.indexOf(b));
+function isLeapYear(date) {
+  return new Date(date.getFullYear(), 1, 29).getDate() === 29;
 }
 
-console.log(sortDigitNamesByNumericOrder([]));
-// => []
-console.log(sortDigitNamesByNumericOrder(['nine', 'eight', 'nine', 'eight']));
-// => [ 'eight','eight','nine','nine']
-console.log(sortDigitNamesByNumericOrder(['one', 'one', 'one', 'zero']));
-// => [ 'zero','one','one','one' ]
+console.log(isLeapYear(new Date(1900, 1, 1))); //    => false
+console.log(isLeapYear(new Date(2000, 1, 1))); //    => true
+console.log(isLeapYear(new Date(2001, 1, 1))); //    => false
+console.log(isLeapYear(new Date(2012, 1, 1))); //    => true
+console.log(isLeapYear(new Date(2015, 1, 1))); //    => false
 */
